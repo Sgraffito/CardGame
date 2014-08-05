@@ -17,14 +17,6 @@
 
 - (BOOL)isGameOver:(NSArray *)unmatchedCards {
     
-    // Test print
-    /*
-    for (int i = 0; i < [unmatchedCards count]; i += 1){
-        Card *unmatched = [unmatchedCards objectAtIndex:i];
-        NSLog(@"%d unmatchedCard: %@", i, unmatched.contents);
-    }
-     */
-    
     for(int i = 0; i < [unmatchedCards count] - 2; i += 1) {
         for (int j = i + 1; j < [unmatchedCards count] - 1; j += 1) {
             for (int k = j + 1; k < [unmatchedCards count]; k += 1) {
@@ -39,7 +31,6 @@
                 
                 // If three cards are a match, the game is not over, return false
                 if (score) {
-                    //NSLog(@"Matched %@, %@, %@", firstCard.contents, secondCard.contents, thirdCard.contents);
                     return false;
                 }
             }
@@ -51,7 +42,7 @@
 }
 
 - (int)match:(NSArray *)otherCards {
-    
+        
     // If no cards are matched score is zero
     int score = 0;
     
@@ -195,7 +186,7 @@
 
 // Class method
 + (NSArray *)validSymbols {
-    return @[@"▲", @"●", @"◼︎"];
+    return @[@"oval", @"diamond", @"squiggle"];
 }
 
 + (NSArray *)numberStrings {

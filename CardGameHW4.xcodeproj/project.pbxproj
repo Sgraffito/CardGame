@@ -28,6 +28,13 @@
 		BC04672A197EEAED00892335 /* SetCard.m in Sources */ = {isa = PBXBuildFile; fileRef = BC046727197EEAED00892335 /* SetCard.m */; };
 		BC04672B197EEAED00892335 /* SetCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = BC046729197EEAED00892335 /* SetCardDeck.m */; };
 		BC04672E197EEF0E00892335 /* PlayingCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC04672D197EEF0E00892335 /* PlayingCardView.m */; };
+		BC49AEB0198BDA1B00F16EB7 /* GameOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC49AEAF198BDA1B00F16EB7 /* GameOverView.m */; };
+		BC8EB5251987D9940069DE1E /* Grid.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8EB5241987D9940069DE1E /* Grid.m */; };
+		BC8EB5351987E8830069DE1E /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8EB5341987E8830069DE1E /* CardMatchingGame.m */; };
+		BC8EB538198818150069DE1E /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8EB537198818150069DE1E /* GridView.m */; };
+		BCA1828F19807FA3001ECF5E /* SetCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA1828E19807FA3001ECF5E /* SetCardView.m */; };
+		BCA182921980B49A001ECF5E /* SetCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCA182911980B49A001ECF5E /* SetCardGameViewController.m */; };
+		BCFB1EBD197F5E1C004A3A9C /* PlayingCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFB1EBC197F5E1C004A3A9C /* PlayingCardGameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +79,22 @@
 		BC046727197EEAED00892335 /* SetCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCard.m; path = ../SetCard.m; sourceTree = "<group>"; };
 		BC046728197EEAED00892335 /* SetCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetCardDeck.h; path = ../SetCardDeck.h; sourceTree = "<group>"; };
 		BC046729197EEAED00892335 /* SetCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCardDeck.m; path = ../SetCardDeck.m; sourceTree = "<group>"; };
-		BC04672C197EEF0E00892335 /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardView.h; sourceTree = "<group>"; };
-		BC04672D197EEF0E00892335 /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardView.m; sourceTree = "<group>"; };
+		BC04672C197EEF0E00892335 /* PlayingCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayingCardView.h; path = Model/PlayingCardView.h; sourceTree = "<group>"; };
+		BC04672D197EEF0E00892335 /* PlayingCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingCardView.m; path = Model/PlayingCardView.m; sourceTree = "<group>"; };
+		BC49AEAE198BDA1B00F16EB7 /* GameOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverView.h; path = Model/GameOverView.h; sourceTree = "<group>"; };
+		BC49AEAF198BDA1B00F16EB7 /* GameOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverView.m; path = Model/GameOverView.m; sourceTree = "<group>"; };
+		BC8EB5231987D9940069DE1E /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		BC8EB5241987D9940069DE1E /* Grid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grid.m; sourceTree = "<group>"; };
+		BC8EB5331987E8830069DE1E /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
+		BC8EB5341987E8830069DE1E /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
+		BC8EB536198818150069DE1E /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		BC8EB537198818150069DE1E /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		BCA1828D19807FA3001ECF5E /* SetCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetCardView.h; path = Model/SetCardView.h; sourceTree = "<group>"; };
+		BCA1828E19807FA3001ECF5E /* SetCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetCardView.m; path = Model/SetCardView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		BCA182901980B49A001ECF5E /* SetCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCardGameViewController.h; sourceTree = "<group>"; };
+		BCA182911980B49A001ECF5E /* SetCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCardGameViewController.m; sourceTree = "<group>"; };
+		BCFB1EBB197F5E1C004A3A9C /* PlayingCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardGameViewController.h; sourceTree = "<group>"; };
+		BCFB1EBC197F5E1C004A3A9C /* PlayingCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardGameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +154,11 @@
 		BC0466E8197EEA3F00892335 /* CardGameHW4 */ = {
 			isa = PBXGroup;
 			children = (
+				BC49AEAD198BBE4200F16EB7 /* iPad */,
 				BC046717197EEABB00892335 /* Model */,
+				BC49AEB1198BF96300F16EB7 /* Views */,
+				BCFB1EBA197F58D1004A3A9C /* View Controllers */,
 				BC0466F4197EEA3F00892335 /* Main.storyboard */,
-				BC0466F7197EEA3F00892335 /* CardGameViewController.h */,
-				BC0466F8197EEA3F00892335 /* CardGameViewController.m */,
 				BC0466FA197EEA3F00892335 /* Images.xcassets */,
 				BC0466E9197EEA3F00892335 /* Supporting Files */,
 			);
@@ -179,10 +201,14 @@
 			children = (
 				BC046725197EEADD00892335 /* Set Card */,
 				BC046724197EEAC600892335 /* Playing Card */,
+				BC8EB5331987E8830069DE1E /* CardMatchingGame.h */,
+				BC8EB5341987E8830069DE1E /* CardMatchingGame.m */,
 				BC046718197EEABB00892335 /* Card.h */,
 				BC046719197EEABB00892335 /* Card.m */,
 				BC04671A197EEABB00892335 /* Deck.h */,
 				BC04671B197EEABB00892335 /* Deck.m */,
+				BC8EB5231987D9940069DE1E /* Grid.h */,
+				BC8EB5241987D9940069DE1E /* Grid.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,8 +216,6 @@
 		BC046724197EEAC600892335 /* Playing Card */ = {
 			isa = PBXGroup;
 			children = (
-				BC04672C197EEF0E00892335 /* PlayingCardView.h */,
-				BC04672D197EEF0E00892335 /* PlayingCardView.m */,
 				BC04671C197EEABB00892335 /* PlayingCard.h */,
 				BC04671D197EEABB00892335 /* PlayingCard.m */,
 				BC04671E197EEABB00892335 /* PlayingCardDeck.h */,
@@ -209,6 +233,41 @@
 				BC046729197EEAED00892335 /* SetCardDeck.m */,
 			);
 			name = "Set Card";
+			sourceTree = "<group>";
+		};
+		BC49AEAD198BBE4200F16EB7 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		BC49AEB1198BF96300F16EB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC8EB536198818150069DE1E /* GridView.h */,
+				BC8EB537198818150069DE1E /* GridView.m */,
+				BC04672C197EEF0E00892335 /* PlayingCardView.h */,
+				BC04672D197EEF0E00892335 /* PlayingCardView.m */,
+				BCA1828D19807FA3001ECF5E /* SetCardView.h */,
+				BCA1828E19807FA3001ECF5E /* SetCardView.m */,
+				BC49AEAE198BDA1B00F16EB7 /* GameOverView.h */,
+				BC49AEAF198BDA1B00F16EB7 /* GameOverView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BCFB1EBA197F58D1004A3A9C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC0466F7197EEA3F00892335 /* CardGameViewController.h */,
+				BC0466F8197EEA3F00892335 /* CardGameViewController.m */,
+				BCFB1EBB197F5E1C004A3A9C /* PlayingCardGameViewController.h */,
+				BCFB1EBC197F5E1C004A3A9C /* PlayingCardGameViewController.m */,
+				BCA182901980B49A001ECF5E /* SetCardGameViewController.h */,
+				BCA182911980B49A001ECF5E /* SetCardGameViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,12 +370,19 @@
 			files = (
 				BC046722197EEABB00892335 /* PlayingCard.m in Sources */,
 				BC046721197EEABB00892335 /* Deck.m in Sources */,
+				BCA182921980B49A001ECF5E /* SetCardGameViewController.m in Sources */,
+				BC8EB5251987D9940069DE1E /* Grid.m in Sources */,
+				BCFB1EBD197F5E1C004A3A9C /* PlayingCardGameViewController.m in Sources */,
 				BC04672A197EEAED00892335 /* SetCard.m in Sources */,
+				BC8EB538198818150069DE1E /* GridView.m in Sources */,
+				BC49AEB0198BDA1B00F16EB7 /* GameOverView.m in Sources */,
 				BC04672B197EEAED00892335 /* SetCardDeck.m in Sources */,
 				BC0466F3197EEA3F00892335 /* CardGameAppDelegate.m in Sources */,
 				BC0466F9197EEA3F00892335 /* CardGameViewController.m in Sources */,
 				BC046723197EEABB00892335 /* PlayingCardDeck.m in Sources */,
 				BC0466EF197EEA3F00892335 /* main.m in Sources */,
+				BCA1828F19807FA3001ECF5E /* SetCardView.m in Sources */,
+				BC8EB5351987E8830069DE1E /* CardMatchingGame.m in Sources */,
 				BC046720197EEABB00892335 /* Card.m in Sources */,
 				BC04672E197EEF0E00892335 /* PlayingCardView.m in Sources */,
 			);
@@ -443,10 +509,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardGameHW4/CardGameHW4-Prefix.pch";
 				INFOPLIST_FILE = "CardGameHW4/CardGameHW4-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -456,10 +525,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardGameHW4/CardGameHW4-Prefix.pch";
 				INFOPLIST_FILE = "CardGameHW4/CardGameHW4-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

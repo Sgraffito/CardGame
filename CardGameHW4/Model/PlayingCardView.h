@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *suit;
 @property (nonatomic) BOOL faceUp;
 
-- (void)tap:(UITapGestureRecognizer *)tap;
+- (void)tap;
+- (void)fadeCard;
 
 @end

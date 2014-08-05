@@ -16,11 +16,30 @@
 
 #pragma mark - Gestures
 
-- (void)tap:(UITapGestureRecognizer *)tap {
-    if ((tap.state == UIGestureRecognizerStateChanged) ||
-        (tap.state == UIGestureRecognizerStateEnded)) {
-        self.faceUp = !self.faceUp;
-    }
+- (void)tap {
+    [self animateCard];
+}
+
+#pragma mark - Animations
+
+- (void)animateCard {
+    [PlayingCardView transitionWithView:(UIView *)self
+                               duration:1.0
+                                options:UIViewAnimationOptionTransitionFlipFromLeft
+                             animations:^{
+                                 self.faceUp = !self.faceUp;
+                             }
+                             completion:nil];
+}
+
+- (void)fadeCard {
+    [PlayingCardView transitionWithView:(UIView *)self
+                               duration:1.0
+                                options:UIViewAnimationOptionTransitionNone
+                             animations:^ {
+                                 self.alpha = 0.5;
+                             }
+                             completion:nil];
 }
 
 #pragma mark - Properties
@@ -70,6 +89,7 @@
         gesture.scale = 1.0;
     }
 }
+
 #pragma mark - Drawing
 
 #define  CORNER_FONT_STANDARD_HEIGHT 100.0
@@ -118,12 +138,6 @@
     else {
         [[UIImage imageNamed:@"cardBack"] drawInRect:self.bounds];
     }
-    
-    // Draw black line around edge of card
-//    [[UIColor blackColor] setStroke];
-//    [roundedRect setLineWidth:2.0];
-//    [roundedRect stroke];
-
 }
 
 #pragma mark - Draw Pips
@@ -166,13 +180,25 @@
 - (void)drawPipsWithHorizonalOffset:(CGFloat)hoffset
                      verticalOffset:(CGFloat)voffset
                          upsideDown:(BOOL)upsideDown {
+    
+    // Color of text
+    UIColor *colorOfText;
+    if ([self.suit isEqualToString:@"♦︎"] || [self.suit isEqualToString:@"♥︎"]) {
+        colorOfText = [UIColor redColor];
+    }
+    else {
+        colorOfText = [UIColor blackColor];
+    }
+
     if (upsideDown) {
         [self pushContextAndRotateUpsideDown];
     }
     CGPoint middle = CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
     UIFont *pipFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     pipFont = [pipFont fontWithSize:[pipFont pointSize] * self.bounds.size.width * PIP_FONT_SCALE_FACTOR];
-    NSAttributedString *attributedSuit = [[NSAttributedString alloc] initWithString:self.suit attributes:@ {NSFontAttributeName : pipFont }];
+    NSAttributedString *attributedSuit = [[NSAttributedString alloc] initWithString:self.suit attributes:@ {
+        NSForegroundColorAttributeName : colorOfText,
+        NSFontAttributeName : pipFont }];
     CGSize pipSize = [attributedSuit size];
     CGPoint pipOrgin = CGPointMake(
                                    middle.x - pipSize.width / 2.0 - hoffset * self.bounds.size.width,
@@ -218,6 +244,15 @@
 
 - (void)drawCorners {
     
+    // Color of text
+    UIColor *colorOfText;
+    if ([self.suit isEqualToString:@"♦︎"] || [self.suit isEqualToString:@"♥︎"]) {
+        colorOfText = [UIColor redColor];
+    }
+    else {
+        colorOfText = [UIColor blackColor];
+    }
+
     // Paragraph style
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.alignment = NSTextAlignmentCenter;
@@ -229,7 +264,9 @@
     // Attributed string for corner text
     NSAttributedString *cornerText = [[NSAttributedString alloc]
                                       initWithString:[NSString stringWithFormat:@"%@\n%@", [self rankAsString], self.suit]
-                                      attributes:@{ NSFontAttributeName : cornerFont, NSParagraphStyleAttributeName : paragraphStyle } ];
+                                      attributes:@{ NSForegroundColorAttributeName : colorOfText,
+                                                    NSFontAttributeName : cornerFont,
+                                                    NSParagraphStyleAttributeName : paragraphStyle } ];
     
     // Draw upper-left corner text, does text alignment within rectangle
     CGRect textBounds;
